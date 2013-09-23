@@ -1,0 +1,21 @@
+setup :KML do
+    name 'Subway entrances'
+    description 'Subway entrances in Stockholm tunnelbana'
+
+    folder :subway_entrance do
+        name 'Subway entrances'
+        description 'Subway entrances in Stockholm tunnelbana'
+        folder :subway_entrance do
+            style do
+                icon( :href => 'http://upload.wikimedia.org/wikipedia/commons/thumb/4/46/Stockholm_metro_symbol.svg/500px-Stockholm_metro_symbol.svg.png', :scale => 0.7 )
+            end
+        end
+    end
+end
+
+nodes do
+    if railway='subway_entrance'
+        :subway_entrance << {:name => name }
+    end
+end
+
